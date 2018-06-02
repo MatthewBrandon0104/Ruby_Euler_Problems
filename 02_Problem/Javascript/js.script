@@ -1,0 +1,28 @@
+function fibo() {
+	let array = [];
+  let evens = [];
+  
+  let a = 0;
+  let b = 1;
+  let c = 0;
+  
+  let total = 0;
+  
+  for (i = 0; i < 100; i++) {
+  	c = a + b;
+    a = b;
+    b = c;
+    
+    array.push(c);
+    if (c % 2 === 0) {
+    	evens.push(c);
+    }
+    if (c >= 4000000) {
+    	break;
+    }
+  }
+  for (j = 0; j < evens.length; j++) {
+  	total += evens[j];
+  }
+return total;
+}
